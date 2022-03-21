@@ -1,10 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">logo goes here</div>
-      <v-spacer></v-spacer>
-    </v-app-bar>
-
+    <MainHeader />
     <v-main>
       <router-view />
     </v-main>
@@ -13,12 +9,18 @@
 
 <script lang="ts">
 import Vue from "vue";
+import MainHeader from "@/components/helper/Header.vue";
 
 export default Vue.extend({
   name: "App",
-
+  components: { MainHeader },
   data: () => ({
     //
   }),
 });
 </script>
+<style>
+.v-app-bar {
+  box-shadow: 0 6px 9px rgba(120, 120, 120, 0.3) !important;
+}
+</style>
