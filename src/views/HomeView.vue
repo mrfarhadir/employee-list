@@ -1,8 +1,8 @@
 <template>
   <v-layout row>
     <v-flex xs12>
-      <EmployeeFilter />
-      <EmployeeList :items="items" />
+      <EmployeeFilter @filterChanged="(filter) => (this.filter = filter)" />
+      <EmployeeList :items="filteredItems" />
     </v-flex>
   </v-layout>
 </template>
@@ -21,8 +21,31 @@ import { Api } from "@/api";
   },
 })
 export default class HomeView extends Vue {
-  items: Array<Employee> = [];
   loading = false;
+
+  filter = {
+    name: "",
+    office: "",
+  };
+
+  items: Array<Employee> = [];
+
+  get filteredItems() {
+    let items = this.items;
+    if (this.filter.name) {
+      items = items.filter((item) =>
+        item.name.toLowerCase().includes(this.filter.name.toLowerCase())
+      );
+    }
+
+    if (this.filter.office) {
+      items = items.filter((item) =>
+        item.office.toLowerCase().includes(this.filter.office.toLowerCase())
+      );
+    }
+
+    return items;
+  }
 
   mounted() {
     this.getEmployees();
