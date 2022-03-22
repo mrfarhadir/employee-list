@@ -10,13 +10,25 @@
           <span class="d-block">Office: {{ item.office }}</span>
         </div>
         <div>
-          <a :href="`https://linkedin.com/in/${item.linkedIn}`" target="_blank">
+          <a
+            v-if="item.linkedIn"
+            :href="`https://linkedin.com${item.linkedIn.trim()}`"
+            target="_blank"
+          >
             <v-icon>mdi-linkedin</v-icon>
           </a>
-          <a :href="`https://github.com/${item.gitHub}`" target="_blank">
+          <a
+            v-if="item.gitHub"
+            :href="`https://github.com/${item.gitHub.trim()}`"
+            target="_blank"
+          >
             <v-icon>mdi-github</v-icon>
           </a>
-          <a :href="`https://twitter/${item.twitter}`" target="_blank">
+          <a
+            v-if="item.twitter"
+            :href="`https://twitter/${item.twitter.trim()}`"
+            target="_blank"
+          >
             <v-icon>mdi-twitter</v-icon>
           </a>
         </div>
@@ -27,15 +39,23 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import { Employee } from "../../../types";
 
-@Component({})
+@Component({
+  name: "EmployeeCardItem",
+})
 export default class EmployeeCardItem extends Vue {
   @Prop() item: Employee | undefined;
 }
 </script>
 
-<style>
-.employee-card-item img {
-  max-width: 100%;
+<style lang="scss">
+.employee-card-item {
+  img {
+    max-width: 100%;
+  }
+  a {
+    text-decoration: none;
+  }
 }
 </style>

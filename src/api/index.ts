@@ -1,4 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
+import { Employee } from "../../types";
 export class Api {
   request: AxiosInstance = {} as AxiosInstance;
 

@@ -1,4 +1,4 @@
-type Employee = {
+export type Employee = {
   name: string;
   office: string;
   imagePortraitUrl: string;
