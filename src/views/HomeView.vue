@@ -1,8 +1,8 @@
 <template>
   <v-layout row>
-    <v-flex xs12>
+    <v-flex xs12 class="mt-2">
       <EmployeeFilter @filterChanged="(filter) => (this.filter = filter)" />
-      <EmployeeList :items="filteredItems" />
+      <EmployeeList class="mt-4" :items="filteredItems" />
     </v-flex>
   </v-layout>
 </template>

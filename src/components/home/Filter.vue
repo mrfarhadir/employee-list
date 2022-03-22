@@ -19,7 +19,7 @@
         <v-text-field
           v-model="filter.office"
           label="Search by employee office"
-          class="ml-4"
+          class="ml-sm-4"
           prepend-inner-icon="mdi-office-building"
           filled
           dense
