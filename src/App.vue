@@ -2,7 +2,9 @@
   <v-app>
     <MainHeader />
     <v-main>
-      <router-view />
+      <v-container grid-list-md>
+        <router-view />
+      </v-container>
     </v-main>
   </v-app>
 </template>
