@@ -3,7 +3,7 @@
     <HeaderLogo />
     <h3 class="font-weight-light ml-4">Farhad Mehryari</h3>
     <v-spacer></v-spacer>
-    <v-chip small color="accent">Assessment Project</v-chip>
+    <v-chip color="darken-1" outlined>Assessment Project</v-chip>
   </v-app-bar>
 </template>
 
