@@ -1,7 +1,13 @@
 <template>
   <v-card class="employee-card-item">
     <v-card-text>
-      <img :src="item.imagePortraitUrl" :alt="item.name" />
+      <figure>
+        <img
+          :src="item.imagePortraitUrl"
+          :alt="item.name + ' Portrait Image'"
+        />
+        <figcaption v-text="item.name + ' Portrait Image'" />
+      </figure>
     </v-card-text>
     <v-card-text>
       <div class="d-flex justify-space-between">
