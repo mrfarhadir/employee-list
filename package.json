@@ -1,5 +1,6 @@
 {
   "name": "1337",
+  "description": "Farhad Mehryari assessment project for 1337 company in front-end position.",
   "version": "0.1.0",
   "private": true,
   "scripts": {
