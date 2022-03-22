@@ -12,6 +12,7 @@
         <div>
           <a
             v-if="item.linkedIn"
+            aria-label="LinkedIn Link"
             :href="`https://linkedin.com${item.linkedIn.trim()}`"
             target="_blank"
           >
@@ -19,12 +20,14 @@
           </a>
           <a
             v-if="item.gitHub"
+            aria-label="Github Link"
             :href="`https://github.com/${item.gitHub.trim()}`"
             target="_blank"
           >
             <v-icon>mdi-github</v-icon>
           </a>
           <a
+            aria-label="Twitter Link"
             v-if="item.twitter"
             :href="`https://twitter/${item.twitter.trim()}`"
             target="_blank"

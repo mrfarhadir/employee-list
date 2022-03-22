@@ -59,7 +59,7 @@ export default class HomeView extends Vue {
     )
       .employeesList()
       .then((items) => {
-        this.items = items;
+        if (items.length) this.items = items;
       })
       .catch((e) => console.log(e))
       .finally(() => {
