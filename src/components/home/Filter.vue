@@ -8,23 +8,23 @@
       <div class="d-block d-sm-flex">
         <v-text-field
           v-model="filter.name"
+          label="Search by employee name"
           prepend-inner-icon="mdi-account"
           filled
           dense
           flat
           outlined
-          prefix="Name"
           color="accent"
         />
         <v-text-field
           v-model="filter.office"
+          label="Search by employee office"
           class="ml-4"
           prepend-inner-icon="mdi-office-building"
           filled
           dense
           flat
           outlined
-          prefix="office"
           color="accent"
         />
       </div>
