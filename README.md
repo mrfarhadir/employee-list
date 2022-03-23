@@ -5,6 +5,13 @@
 npm install
 ```
 
+
+### Run Proxy Server
+
+```bash
+npm run proxy
+```
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
