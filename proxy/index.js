@@ -5,7 +5,7 @@ app.use(cors());
 const request = axios.create({
   baseURL: "https://api-dev.1337co.de/v3/",
 });
-
+// this could be fetched from .env file too
 request.defaults.headers.common.Authorization =
   "api-key 14:2022-03-21:emelie.nilsson@1337.tech 0fdaf3cfc7f618f7c1f514f3bace24d3286593618f144a20298b125fba5eaff8";
 
@@ -21,4 +21,8 @@ app.get("/v3/employees", (_req, res) => {
     });
 });
 
-app.listen(3000);
+const port = 3000;
+
+app.listen(port, () => {
+  console.log("api server fired on port " + port);
+});
