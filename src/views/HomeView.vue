@@ -53,7 +53,7 @@ export default class HomeView extends Vue {
 
   getEmployees() {
     this.loading = true;
-    new Api()
+    new Api("http://127.0.0.1:3000/v3/")
       .employeesList()
       .then((items) => {
         if (items.length) this.items = items;

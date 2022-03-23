@@ -3,7 +3,7 @@
     <v-card-text>
       <figure>
         <img
-          :src="item.imagePortraitUrl"
+          :src="item.imagePortraitUrl || '/image/user.png'"
           :alt="item.name + ' Portrait Image'"
         />
         <figcaption v-text="item.name + ' Portrait Image'" />

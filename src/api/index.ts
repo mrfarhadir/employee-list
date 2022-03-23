@@ -3,8 +3,9 @@ import { Employee } from "@/types";
 export class Api {
   request: AxiosInstance = {} as AxiosInstance;
 
-  constructor(public config?: AxiosRequestConfig) {
+  constructor(baseUrl: string, public config?: AxiosRequestConfig) {
     this.request = axios.create(this.config);
+    this.request.defaults.baseURL = baseUrl;
   }
 
   private async get(url: string) {
