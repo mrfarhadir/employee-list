@@ -42,9 +42,9 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { Employee } from "../../../types";
 import EmployeeCardItem from "@/components/employee/CardItem.vue";
 import EmployeeListItem from "@/components/employee/ListItem.vue";
+import { Employee } from "@/types";
 
 @Component({
   name: "EmployeeList",

@@ -11,8 +11,8 @@
 import EmployeeFilter from "@/components/home/Filter.vue";
 import EmployeeList from "@/components/employee/List.vue";
 import { Component, Vue } from "vue-property-decorator";
-import { Employee } from "../../types";
 import { Api } from "@/api";
+import { Employee } from "@/types";
 
 @Component({
   components: {
@@ -27,7 +27,7 @@ export default class HomeView extends Vue {
     name: "",
     office: "",
   };
-
+  x = 0;
   items: Array<Employee> = [];
 
   get filteredItems() {

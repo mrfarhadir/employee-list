@@ -53,7 +53,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { Employee } from "../../../types";
+import { Employee } from "@/types";
 
 @Component({
   name: "EmployeeListItem",

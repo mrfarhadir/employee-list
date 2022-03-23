@@ -47,8 +47,8 @@
 </template>
 
 <script lang="ts">
+import { Employee } from "@/types";
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { Employee } from "../../../types";
 
 @Component({
   name: "EmployeeCardItem",
