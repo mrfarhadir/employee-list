@@ -8,6 +8,7 @@
         <div>
           Layout:
           <v-btn
+            aria-label="Change layout to grid"
             height="32"
             width="32"
             class="mx-2"
@@ -17,6 +18,7 @@
             <v-icon>mdi-view-grid</v-icon>
           </v-btn>
           <v-btn
+            aria-label="Change Layout to List"
             height="32"
             width="32"
             :color="layout === 'list' ? 'accent' : ''"
