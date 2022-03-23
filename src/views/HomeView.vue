@@ -2,7 +2,15 @@
   <v-layout row>
     <v-flex xs12 class="mt-2">
       <EmployeeFilter @filterChanged="(filter) => (this.filter = filter)" />
-      <EmployeeList class="mt-4" :items="filteredItems" />
+      <div v-if="loading" class="d-flex justify-center py-8">
+        <v-progress-circular
+          indeterminate
+          :width="2"
+          :size="64"
+          color="accent"
+        />
+      </div>
+      <EmployeeList v-else class="mt-4" :items="filteredItems" />
     </v-flex>
   </v-layout>
 </template>
